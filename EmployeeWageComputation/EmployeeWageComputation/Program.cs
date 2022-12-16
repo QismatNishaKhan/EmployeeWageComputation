@@ -5,8 +5,8 @@
         static void Main(string[] args)
         {
             EmployeeRoll employeeRoll = new EmployeeRoll();
-            employeeRoll.CalculateEmpWage();
-
+            employeeRoll.PartAndFullTime();
+            employeeRoll.CalculateEmpWge();
         }  
     }
 }
