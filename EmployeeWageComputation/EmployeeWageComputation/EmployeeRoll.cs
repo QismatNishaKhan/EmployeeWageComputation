@@ -6,20 +6,24 @@ using System.Threading.Tasks;
 
 namespace EmployeeWageComputation
 {
-    internal class EmployeeRoll
-    {
-        public void Attendance()
+ 
+        public class EmployeeRoll
         {
+            const int Is_FULL_TIME = 0, Wage_PER_HR = 20, FULL_TIME_HR = 8;
 
-            Random random = new Random();
-            int empCheck = random.Next(0, 2);
-            if (empCheck == 0)
+            public void CalculateEmpWage()
+            {
+                Random random = new Random();
+                int empCheck = random.Next(0, 2);
+                if (empCheck == Is_FULL_TIME)
+                {
+                    int totalEmpWage = Wage_PER_HR * FULL_TIME_HR;
+                    Console.WriteLine(totalEmpWage);
 
-                Console.WriteLine("Employee is Present");
-            else
-                Console.WriteLine("Employee is Absent");
+                }
+            }
         }
     }
-}
-    
+
+
 
